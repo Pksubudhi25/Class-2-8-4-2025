@@ -6,7 +6,8 @@ import streamlit as st
 
 # Load environment variables
 load_dotenv(".env")
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+# gemini_api_key = os.getenv("GEMINI_API_KEY")
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
 
 # Check API key
 if not gemini_api_key:
